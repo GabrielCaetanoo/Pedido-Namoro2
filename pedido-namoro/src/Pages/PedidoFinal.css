@@ -1,0 +1,31 @@
+/* PedidoPage.css */
+
+.pedido-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff3e6;
+  }
+  
+  .pedido-title {
+    font-size: 2.5rem;
+    color: #ff6f61;
+  }
+  
+  .pedido-message {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  
+  .yes-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .yes-button:hover {
+    background-color: #45a049;
+  }
+  
