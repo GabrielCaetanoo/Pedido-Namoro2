@@ -62,3 +62,15 @@
   background-color: #ff5770;
   transform: scale(1.1);
 }
+
+.contador {
+  font-weight: bold;
+  color: #ff6f61; /* Um tom romântico */
+  font-size: 1.2rem;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}

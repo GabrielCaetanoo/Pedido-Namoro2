@@ -4,9 +4,9 @@ import "./Mensagens.css"; // Importação correta do CSS
 
 export default function Mensagens() {
   const mensagens = [
-    "Desde que te conheci, minha vida mudou...",
-    "Você é incrível e me faz muito feliz...",
-    "Eu queria te perguntar algo importante..."
+    { texto: "Desde que te conheci, minha vida mudou...", imagem: momento1},
+    { texto: "Você é incrível e me faz muito feliz...", imagem: momento2 },
+    { texto: "Eu queria te perguntar algo importante...", imagem: momento3 }
   ];
 
   const [index, setIndex] = useState(0);
@@ -27,7 +27,10 @@ export default function Mensagens() {
 
   return (
     <div className="page-container">
-      <h3 className="mensagem">{mensagens[index]}</h3>
+      <div className="mensagem-box">
+        <img src={mensagens[index].imagem} alt="Memória" className="mensagem-imagem" />
+        <h3 className="mensagem">{mensagens[index].texto}</h3>
+      </div>
     </div>
   );
 }

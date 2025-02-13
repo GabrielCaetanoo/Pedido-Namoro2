@@ -1,39 +1,47 @@
-/* Mensagens.css */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 .page-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3) !important; /* Força o degradê */
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Poppins", sans-serif;
 }
 
-/* Caixa de mensagem com efeito vidro */
+.mensagem-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 90%;
+}
+
+.mensagem-imagem {
+  width: 80%;
+  max-width: 250px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .mensagem {
   font-size: 1.8rem;
   font-weight: bold;
   padding: 20px;
   max-width: 80%;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.3); /* Leve transparência */
-  backdrop-filter: blur(8px); /* Efeito vidro */
-  color: #222; /* Cor escura para o texto */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  color: #222;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translateY(-10px);
   animation: fadeIn 1s ease-in-out forwards;
 }
 
-/* Animação suave */
+/* Efeito de fade-in */
 @keyframes fadeIn {
   0% {
     opacity: 0;
