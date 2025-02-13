@@ -1,31 +1,138 @@
-/* PedidoPage.css */
+/* PedidoFinal.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3) !important; /* Degradê */
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Caixa do pedido */
 .pedido-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff3e6;
+  text-align: center;
+  padding: 40px;
+  max-width: 90%;
+  width: 500px;
+  background: rgba(255, 255, 255, 0.3); /* Efeito vidro */
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Título */
+.pedido-title {
+  font-size: 2.8rem;
+  color: #ff3f34;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensagem */
+.pedido-message {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  color: #222;
+}
+
+/* Botão de "Sim" */
+.yes-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.yes-button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .pedido-title {
-    font-size: 2.5rem;
-    color: #ff6f61;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .pedido-message {
-    font-size: 1.5rem;
-    margin: 20px 0;
+}
+
+.hearts {
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatUp 2s ease-in-out forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
-  
-  .yes-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100vh);
   }
-  
-  .yes-button:hover {
-    background-color: #45a049;
-  }
-  
+}
+
+/* Estilos do Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  color: #ff6f61;
+  font-size: 2rem;
+}
+
+.modal-content button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal-content button:hover {
+  background-color: #45a049;
+}
+

@@ -6,7 +6,7 @@ export default function HomePage() {
     <div className="home-container">
       <h1 className="home-title">Ana Luiza Forti Neves</h1>
       <p className="home-description">
-        Está preparada para uma surpresa? Escaneie o QR Code para começar.
+        Está preparada para uma surpresa? 
       </p>
       <Link to="/mensagens" className="start-button">Começar</Link>
     </div>

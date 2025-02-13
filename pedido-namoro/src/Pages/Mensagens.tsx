@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Mensagens.css"; // Importação correta do CSS
 
 export default function Mensagens() {
   const mensagens = [
@@ -17,12 +18,16 @@ export default function Mensagens() {
         setIndex((prev) => prev + 1);
       } else {
         clearInterval(interval);
-        navigate("/pedido"); // Navega diretamente após a última mensagem
+        setTimeout(() => navigate("/pedido"), 2000);
       }
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [index, mensagens.length, navigate]);
 
-  return <h3>{mensagens[index]}</h3>;
+  return (
+    <div className="page-container">
+      <h3 className="mensagem">{mensagens[index]}</h3>
+    </div>
+  );
 }
