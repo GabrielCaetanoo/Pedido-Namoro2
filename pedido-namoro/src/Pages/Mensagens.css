@@ -4,10 +4,22 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(-45deg, #ff758c, #ff7eb3, #ff9a9e, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
   font-family: "Poppins", sans-serif;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .mensagem-box {
@@ -16,6 +28,15 @@
   align-items: center;
   text-align: center;
   max-width: 90%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 .mensagem-imagem {
@@ -32,16 +53,15 @@
   padding: 20px;
   max-width: 80%;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
   color: #222;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translateY(-10px);
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn 0.8s ease-in-out forwards;
 }
 
-/* Efeito de fade-in */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -50,5 +70,37 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.skip-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff758c;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.skip-button:hover {
+  background-color: #ff7eb3;
+}
+
+@media (max-width: 768px) {
+  .mensagem-box {
+    max-width: 95%;
+  }
+
+  .mensagem-imagem {
+    width: 90%;
+    max-width: 200px;
+  }
+
+  .mensagem {
+    font-size: 1.5rem;
+    padding: 15px;
   }
 }
