@@ -4,7 +4,9 @@ import "./PedidoFinal.css";
 export default function PedidoPage() {
   const [showModal, setShowModal] = useState(false);
   const [showHearts, setShowHearts] = useState(false);
+  const [showFunnyModal, setShowFunnyModal] = useState(false); // Novo estado para o modal engraçado
   const [noButtonPosition, setNoButtonPosition] = useState({ top: 0, left: 0 });
+  const [attempts, setAttempts] = useState(0); // Contador de tentativas
 
   // Função para calcular uma posição aleatória dentro dos limites da tela
   const getRandomPosition = () => {
@@ -20,8 +22,6 @@ export default function PedidoPage() {
     return { top: newTop, left: newLeft };
   };
 
-  
-
   // Atualiza a posição inicial do botão "Não" ao carregar a página
   useEffect(() => {
     setNoButtonPosition(getRandomPosition());
@@ -31,15 +31,15 @@ export default function PedidoPage() {
     setShowModal(true);
     setShowHearts(true);
   };
-  const [attempts, setAttempts] = useState(0);
 
   const handleNoClick = () => {
+    setAttempts(attempts + 1); // Incrementa o contador de tentativas
     setNoButtonPosition(getRandomPosition());
-    setAttempts(attempts + 1);
+
+    // Exibe o modal engraçado após 3 tentativas
     if (attempts >= 3) {
-      alert("Você está tentando muito! 😂");
+      setShowFunnyModal(true);
     }
-    setNoButtonPosition(getRandomPosition());
   };
 
   return (
@@ -59,6 +59,7 @@ export default function PedidoPage() {
         </button>
       </div>
 
+      {/* Modal de confirmação */}
       {showModal && (
         <div className="modal">
           <div className="modal-content">
@@ -68,14 +69,22 @@ export default function PedidoPage() {
         </div>
       )}
 
+      {/* Modal engraçado */}
+      {showFunnyModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <h2>Você está tentando muito! 😂</h2>
+            <p>Será que você não quer reconsiderar?</p>
+            <button onClick={() => setShowFunnyModal(false)}>Fechar</button>
+          </div>
+        </div>
+      )}
+
+      {/* Efeito de corações */}
       {showHearts && (
         <div className="hearts">
           {Array.from({ length: 50 }).map((_, index) => (
-            <span key={index} className="heart">❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
-                                                ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
-                                                ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
-            
-            </span>
+            <span key={index} className="heart">❤️</span>
           ))}
         </div>
       )}

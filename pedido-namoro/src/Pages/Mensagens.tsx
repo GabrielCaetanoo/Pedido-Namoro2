@@ -30,7 +30,7 @@ export default function Mensagens() {
     setFade(true); // Fade in
     const timeout = setTimeout(() => {
       setFade(false); // Fade out antes de mudar a mensagem
-    }, 2500);
+    }, 3500);
 
     return () => clearTimeout(timeout);
   }, [index]);

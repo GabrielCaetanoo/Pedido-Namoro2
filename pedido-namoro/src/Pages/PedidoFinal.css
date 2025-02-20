@@ -106,6 +106,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .modal-content {
@@ -114,11 +115,17 @@ body, html {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeOut 0.5s ease-in-out;
 }
 
 .modal-content h2 {
   color: #ff6f61;
   font-size: 2rem;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
 
 .modal-content button {
