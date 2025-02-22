@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Mensagens.css";
 import momento1 from "../assets/imagens/FOTO1.jpg";
-import momento2 from "../assets/imagens/FOTO2.jpeg";
+import momento22 from "../assets/imagens/FOTO2.jpeg";
 import momento3 from "../assets/imagens/FOTO3.jpg";
 import momento4 from "../assets/imagens/FOTO4.jpg";
 import momento5 from "../assets/imagens/FOTO5.jpg";
@@ -13,7 +13,7 @@ import momento8 from "../assets/imagens/FOTO8.jpeg"; // Imagem única
 export default function Mensagens() {
   const mensagens = [
     { texto: "Desde que te conheci, minha vida mudou...", imagem: momento1 },
-    { texto: "Você é incrível e me faz muito feliz...", imagem: momento2 },
+    { texto: "Você é incrível e me faz muito feliz...", imagem: momento22 },
     { texto: "Eu queria te perguntar algo importante...", imagem: momento3 },
     { texto: "Lembra daquele dia especial? Foi incrível!", imagem: momento4 },
     { texto: "Eu nunca me senti tão bem ao lado de alguém...", imagem: momento5 },
