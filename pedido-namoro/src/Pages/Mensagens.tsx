@@ -13,13 +13,13 @@ import momento8 from "../assets/imagens/FOTO8.jpeg"; // Imagem única
 export default function Mensagens() {
   const mensagens = [
     { texto: "Desde que te conheci, minha vida mudou...", imagem: momento1 },
-    { texto: "Você é incrível e me faz muito feliz...", imagem: momento2 },
-    { texto: "Eu queria te perguntar algo importante...", imagem: momento3 },
-    { texto: "Lembra daquele dia especial? Foi incrível!", imagem: momento4 },
-    { texto: "Eu nunca me senti tão bem ao lado de alguém...", imagem: momento5 },
-    { texto: "Só queria te lembrar o quanto você é especial para mim! ❤️", imagem: momento6 },
-    { texto: "Cada momento ao seu lado se torna inesquecível...", imagem: momento7 },
-    { texto: "Obrigado por ser essa pessoa maravilhosa na minha vida! 💖", imagem: momento8 }
+    { texto: "Cada momento ao seu lado se torna inesquecível...", imagem: momento2 },
+    { texto: "Lembra daquele dia especial? Foi incrível!", imagem: momento6 },
+    { texto: "Eu nunca me senti tão bem ao lado de alguém...", imagem: momento4 },
+    { texto: "Você é incrível e me faz muito feliz...", imagem: momento5 },
+    { texto: "Só queria te lembrar o quanto você é especial para mim! ❤️", imagem: momento3 },
+    { texto: "Obrigado por ser essa pessoa maravilhosa na minha vida! 💖", imagem: momento7 },
+    { texto: "Eu queria te perguntar algo importante...", imagem: momento8 }
   ];
 
   const [index, setIndex] = useState(0);
