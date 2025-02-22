@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "clean": "rm -rf node_modules/.cache && rm -rf dist",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

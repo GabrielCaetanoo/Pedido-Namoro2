@@ -2,9 +2,9 @@
   "compilerOptions": {
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2020",
+    "target": "ES2020", // Mantém o target para ES2020
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "ESNext"], // Adiciona "ESNext" para suportar recursos mais recentes
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -19,7 +19,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Adicionais para resolver os erros */
+    "esModuleInterop": true, // Permite a interoperabilidade entre módulos CommonJS e ES
+    "resolveJsonModule": true, // Permite a importação de arquivos JSON
+    "forceConsistentCasingInFileNames": true, // Evita problemas com diferenciação de maiúsculas/minúsculas
+    "outDir": "./dist", // Define o diretório de saída para os arquivos compilados
+    "rootDir": "./src" // Define o diretório raiz do código-fonte
   },
   "include": ["src"]
 }

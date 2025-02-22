@@ -1,13 +1,21 @@
 {
   "files": [],
-  "include": [
-    "src",
-    "custom.d.ts"
-  ],
+  "include": ["src", "custom.d.ts"],
   "references": [
     { "path": "./tsconfig.app.json" }
   ],
   "compilerOptions": {
+    "target": "es2015", // Define o target para ES2015 ou superior
+    "lib": ["es2015", "dom", "dom.iterable", "esnext"], // Adiciona as bibliotecas necessárias
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "noEmit": false,
     "allowImportingTsExtensions": false
   }
